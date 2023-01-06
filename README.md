@@ -16,7 +16,6 @@ I decided to use a simple array of strings to store the data in the server, alth
 I allowed the client to use commands to interact with the server. 
 
 ## to take in consideration
-
 I am not an expert in Golang, and have only used it in online courses and playing with Bor on the Polygon EVM.
 
 This is my first time using RabbitMQ, so I kept the configuration basic.
