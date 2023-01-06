@@ -1,8 +1,7 @@
 # bloxRoute Project
 ## Introduction
 
-As part of the interview process to bloxRoute i was asked to implement a client-server application using Golang. The project was to implement a client-server application with the following requirements:
-
+This project is a client-server application written in Golang that satisfies the following requirements:
 * multiple-threaded server(channels);
 * multiple clients;
 * External queue between the clients and server;
@@ -10,20 +9,19 @@ As part of the interview process to bloxRoute i was asked to implement a client-
 * Implement the following client requests: AddItem, RemoveItem, GetItem, GetAllItems;
 
 ## Project decisions
-I descided to use RabbitMQ as the external queue because it is a good/fast solution for local development and not because of efficiency or scalability.
+I chose to use RabbitMQ as the external queue because it is a good and fast solution for local development, even though it may not be the most efficient or scalable.
 
-I descided to use a simply array of string to make this project. I could have use an hash map but i wanted to keep it simple.
+I decided to use a simple array of strings to store the data in the server, although I could have used a hash map.
 
-I descided to enable the client to use the command to play with the server I could have done more but again my main goal was to keepItSimple.
-
+I allowed the client to use commands to interact with the server. 
 
 ## to take in consideration
 
-I'm not a Golang expert I have use it only in online courses and playing with Bor on polygon evm.
+I am not an expert in Golang, and have only used it in online courses and playing with Bor on the Polygon EVM.
 
-It's my first time using rabbitmq so I have kept all the basic configuration.
+This is my first time using RabbitMQ, so I kept the configuration basic.
 
-I have not implemented any test it was not requested but I could have done it and i prefer ;p.
+I have not implemented any tests, as it was not requested, but I could have and would prefer to.
 
 ## How to run the project
 
@@ -31,6 +29,7 @@ I have not implemented any test it was not requested but I could have done it an
 
 * Golang
 * RabbitMQ
+* RabbitMq default configuration(guest:guest)
 
 ### Run the server
 * `cd server`
@@ -43,7 +42,11 @@ I have not implemented any test it was not requested but I could have done it an
 #### Examples: 
 `./main --queue-service=rabbitmq --queue-name=request_queue --request-type=add --data=A`
 `./main --queue-service=rabbitmq --queue-name=request_queue --request-type=getAll`
-Note that I have descided to let the client modify the queue name and the service name. I could have hard coded it but I wanted to let the client be able to talk to multiple servers/queues.
+Note that I allowed the client to modify the queue name and service name, rather than hardcoding them, to allow the client to communicate with multiple servers/queues.
+
+## Notes
+This project was a fun learning experience for me in using Golang and RabbitMQ. I may not have been able to complete it without the help of online resources, such as chatGpt for debugging and Stack Overflow for understanding RabbitMQ and installation issues with Homebrew🙃.
+
 
 
 
