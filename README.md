@@ -44,6 +44,12 @@ I have not implemented any tests, as it was not requested, but I could have and 
 * `go build ./main.go`
 * `./main --queue-service=SERVICENAME --queue-name=QUEUENAME --request-type=METHOD(add,remove,getAll,get) --data=STRING`
 
+#### Examples: 
+* `./main --queue-service=rabbitmq --queue-name=request_queue --request-type=add --data=A`
+* `./main --queue-service=rabbitmq --queue-name=request_queue --request-type=getAll`
+
+Note that I allowed the client to modify the queue name and service, rather than hardcoding them, to allow the client to communicate with multiple queue-services/queue-names.
+
 #### default queue-service and queue-name:
 * queue-service: rabbitmq
 * queue-name: request_queue
@@ -53,12 +59,6 @@ I have not implemented any tests, as it was not requested, but I could have and 
 * remove
 * getAll
 * get
-
-#### Examples: 
-* `./main --queue-service=rabbitmq --queue-name=request_queue --request-type=add --data=A`
-* `./main --queue-service=rabbitmq --queue-name=request_queue --request-type=getAll`
-
-Note that I allowed the client to modify the queue name and service, rather than hardcoding them, to allow the client to communicate with multiple queue-services/queue-names.
 
 ## Notes
 This project was a fun learning experience for me in using Golang and RabbitMQ. I may not have been able to complete it without the help of online resources, such as chatGpt for debugging/ideas and Stack Overflow for understanding RabbitMQ and installation issues with Homebrew🙃.
