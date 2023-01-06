@@ -30,6 +30,11 @@ I have not implemented any tests, as it was not requested, but I could have and 
 * RabbitMQ
 * RabbitMq default configuration(guest:guest)
 
+### First steps
+* `git clone https://github.com/ethanolle/bloxRouteClientServer.git`
+* `cd bloxRouteClientServer`
+* open two terminals in the project folder and run the following commands in each terminal.
+
 ### Run the server
 * `cd server`
 * `go run ./main.go`
