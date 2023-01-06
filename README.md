@@ -40,8 +40,8 @@ I have not implemented any tests, as it was not requested, but I could have and 
 * `go build ./main.go`
 * `./main --queue-service=SERVICENAME --queue-name=QUEUENAME --request-type=METHOD(add,remove,getAll,get) --data=STRING`
 #### Examples: 
-`./main --queue-service=rabbitmq --queue-name=request_queue --request-type=add --data=A`
-`./main --queue-service=rabbitmq --queue-name=request_queue --request-type=getAll`
+* `./main --queue-service=rabbitmq --queue-name=request_queue --request-type=add --data=A`
+* `./main --queue-service=rabbitmq --queue-name=request_queue --request-type=getAll`
 Note that I allowed the client to modify the queue name and service name, rather than hardcoding them, to allow the client to communicate with multiple servers/queues.
 
 ## Notes
