@@ -19,5 +19,33 @@ I descided to enable the client to use the command to play with the server I cou
 
 ## to take in consideration
 
+I'm not a Golang expert I have use it only in online courses and playing with Bor on polygon evm.
+
+It's my first time using rabbitmq so I have kept all the basic configuration.
+
+I have not implemented any test it was not requested but I could have done it and i prefer ;p.
+
+## How to run the project
+
+### Requirements
+
+* Golang
+* RabbitMQ
+
+### Run the server
+* `cd server`
+* `go run ./main.go`
+
+### Run the client
+* `cd client`
+* `go build ./main.go`
+* `./main --queue-service=SERVICENAME --queue-name=QUEUENAME --request-type=METHOD(add,remove,getAll,get) --data=STRING`
+Examples: 
+`./main --queue-service=rabbitmq --queue-name=request_queue --request-type=add --data=A`
+`./main --queue-service=rabbitmq --queue-name=request_queue --request-type=getAll`
+Note that I have descided to let the client modify the queue name and the service name. I could have hard coded it but I wanted to let the client be able to talk to multiple servers/queues.
+
+
+
 
 
