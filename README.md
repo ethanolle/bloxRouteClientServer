@@ -40,7 +40,7 @@ I have not implemented any test it was not requested but I could have done it an
 * `cd client`
 * `go build ./main.go`
 * `./main --queue-service=SERVICENAME --queue-name=QUEUENAME --request-type=METHOD(add,remove,getAll,get) --data=STRING`
-Examples: 
+#### Examples: 
 `./main --queue-service=rabbitmq --queue-name=request_queue --request-type=add --data=A`
 `./main --queue-service=rabbitmq --queue-name=request_queue --request-type=getAll`
 Note that I have descided to let the client modify the queue name and the service name. I could have hard coded it but I wanted to let the client be able to talk to multiple servers/queues.
