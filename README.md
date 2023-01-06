@@ -43,6 +43,17 @@ I have not implemented any tests, as it was not requested, but I could have and 
 * `cd client`
 * `go build ./main.go`
 * `./main --queue-service=SERVICENAME --queue-name=QUEUENAME --request-type=METHOD(add,remove,getAll,get) --data=STRING`
+
+#### default queue-service and queue-name:
+* queue-service: rabbitmq
+* queue-name: request_queue
+
+#### request-type options:
+* add
+* remove
+* getAll
+* get
+
 #### Examples: 
 * `./main --queue-service=rabbitmq --queue-name=request_queue --request-type=add --data=A`
 * `./main --queue-service=rabbitmq --queue-name=request_queue --request-type=getAll`
